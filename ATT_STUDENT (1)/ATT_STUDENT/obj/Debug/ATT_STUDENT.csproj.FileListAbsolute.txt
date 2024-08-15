@@ -1,0 +1,53 @@
+D:\Project\Code\SQL\ATT_STUDENT\ATT_STUDENT\bin\Debug\ATT_STUDENT.exe.config
+D:\Project\Code\SQL\ATT_STUDENT\ATT_STUDENT\bin\Debug\ATT_STUDENT.exe
+D:\Project\Code\SQL\ATT_STUDENT\ATT_STUDENT\bin\Debug\ATT_STUDENT.pdb
+D:\Project\Code\SQL\ATT_STUDENT\ATT_STUDENT\obj\Debug\ATT_STUDENT.csproj.AssemblyReference.cache
+D:\Project\Code\SQL\ATT_STUDENT\ATT_STUDENT\obj\Debug\ATT_STUDENT.Properties.Resources.resources
+D:\Project\Code\SQL\ATT_STUDENT\ATT_STUDENT\obj\Debug\ATT_STUDENT.csproj.GenerateResource.cache
+D:\Project\Code\SQL\ATT_STUDENT\ATT_STUDENT\obj\Debug\ATT_STUDENT.csproj.CoreCompileInputs.cache
+D:\Project\Code\SQL\ATT_STUDENT\ATT_STUDENT\obj\Debug\ATT_STUDENT.exe
+D:\Project\Code\SQL\ATT_STUDENT\ATT_STUDENT\obj\Debug\ATT_STUDENT.pdb
+E:\BTEC\Database Design and Development\Project\ATT_STUDENT\ATT_STUDENT\bin\Debug\ATT_STUDENT.exe.config
+E:\BTEC\Database Design and Development\Project\ATT_STUDENT\ATT_STUDENT\bin\Debug\ATT_STUDENT.exe
+E:\BTEC\Database Design and Development\Project\ATT_STUDENT\ATT_STUDENT\bin\Debug\ATT_STUDENT.pdb
+E:\BTEC\Database Design and Development\Project\ATT_STUDENT\ATT_STUDENT\obj\Debug\ATT_STUDENT.csproj.AssemblyReference.cache
+E:\BTEC\Database Design and Development\Project\ATT_STUDENT\ATT_STUDENT\obj\Debug\ATT_STUDENT.Admin.resources
+E:\BTEC\Database Design and Development\Project\ATT_STUDENT\ATT_STUDENT\obj\Debug\ATT_STUDENT.AttendanceRecord.resources
+E:\BTEC\Database Design and Development\Project\ATT_STUDENT\ATT_STUDENT\obj\Debug\ATT_STUDENT.Login.resources
+E:\BTEC\Database Design and Development\Project\ATT_STUDENT\ATT_STUDENT\obj\Debug\ATT_STUDENT.Properties.Resources.resources
+E:\BTEC\Database Design and Development\Project\ATT_STUDENT\ATT_STUDENT\obj\Debug\ATT_STUDENT.Teacher.resources
+E:\BTEC\Database Design and Development\Project\ATT_STUDENT\ATT_STUDENT\obj\Debug\ATT_STUDENT.User.resources
+E:\BTEC\Database Design and Development\Project\ATT_STUDENT\ATT_STUDENT\obj\Debug\ATT_STUDENT.csproj.GenerateResource.cache
+E:\BTEC\Database Design and Development\Project\ATT_STUDENT\ATT_STUDENT\obj\Debug\ATT_STUDENT.csproj.CoreCompileInputs.cache
+E:\BTEC\Database Design and Development\Project\ATT_STUDENT\ATT_STUDENT\obj\Debug\ATT_STUDENT.exe
+E:\BTEC\Database Design and Development\Project\ATT_STUDENT\ATT_STUDENT\obj\Debug\ATT_STUDENT.pdb
+C:\Users\Admin\Desktop\ATT_STUDENT\ATT_STUDENT\ATT_STUDENT\bin\Debug\ATT_STUDENT.exe.config
+C:\Users\Admin\Desktop\ATT_STUDENT\ATT_STUDENT\ATT_STUDENT\bin\Debug\ATT_STUDENT.exe
+C:\Users\Admin\Desktop\ATT_STUDENT\ATT_STUDENT\ATT_STUDENT\bin\Debug\ATT_STUDENT.pdb
+C:\Users\Admin\Desktop\ATT_STUDENT\ATT_STUDENT\ATT_STUDENT\obj\Debug\ATT_STUDENT.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\ATT_STUDENT\ATT_STUDENT\ATT_STUDENT\obj\Debug\ATT_STUDENT.Login.resources
+C:\Users\Admin\Desktop\ATT_STUDENT\ATT_STUDENT\ATT_STUDENT\obj\Debug\ATT_STUDENT.Properties.Resources.resources
+C:\Users\Admin\Desktop\ATT_STUDENT\ATT_STUDENT\ATT_STUDENT\obj\Debug\ATT_STUDENT.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\ATT_STUDENT\ATT_STUDENT\ATT_STUDENT\obj\Debug\ATT_STUDENT.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\ATT_STUDENT\ATT_STUDENT\ATT_STUDENT\obj\Debug\ATT_STUDENT.exe
+C:\Users\Admin\Desktop\ATT_STUDENT\ATT_STUDENT\ATT_STUDENT\obj\Debug\ATT_STUDENT.pdb
+C:\Users\Admin\Desktop\ATT_STUDENT\ATT_STUDENT\ATT_STUDENT\obj\Debug\ATT_STUDENT.Grade.resources
+C:\Users\Admin\Desktop\ATT_STUDENT\ATT_STUDENT\ATT_STUDENT\obj\Debug\ATT_STUDENT.Student.resources
+C:\Users\Admin\Desktop\ATT_STUDENT\ATT_STUDENT\ATT_STUDENT\obj\Debug\ATT_STUDENT.Teacher.resources
+C:\Users\Admin\Desktop\ATT_STUDENT\ATT_STUDENT\ATT_STUDENT\obj\Debug\ATT_STUDENT.Main.resources
+C:\Users\Admin\Desktop\ATT_STUDENT\ATT_STUDENT\ATT_STUDENT\obj\Debug\ATT_STUDENT.MainTeacher.resources
+C:\Users\Admin\Desktop\ATT_STUDENT\ATT_STUDENT\ATT_STUDENT\obj\Debug\ATT_STUDENT.StudentGrade.resources
+C:\Users\pc\Documents\Zalo Received Files\ATT_STUDENT (1)\ATT_STUDENT\bin\Debug\ATT_STUDENT.exe.config
+C:\Users\pc\Documents\Zalo Received Files\ATT_STUDENT (1)\ATT_STUDENT\bin\Debug\ATT_STUDENT.exe
+C:\Users\pc\Documents\Zalo Received Files\ATT_STUDENT (1)\ATT_STUDENT\bin\Debug\ATT_STUDENT.pdb
+C:\Users\pc\Documents\Zalo Received Files\ATT_STUDENT (1)\ATT_STUDENT\obj\Debug\ATT_STUDENT.csproj.AssemblyReference.cache
+C:\Users\pc\Documents\Zalo Received Files\ATT_STUDENT (1)\ATT_STUDENT\obj\Debug\ATT_STUDENT.Grade.resources
+C:\Users\pc\Documents\Zalo Received Files\ATT_STUDENT (1)\ATT_STUDENT\obj\Debug\ATT_STUDENT.Login.resources
+C:\Users\pc\Documents\Zalo Received Files\ATT_STUDENT (1)\ATT_STUDENT\obj\Debug\ATT_STUDENT.MainTeacher.resources
+C:\Users\pc\Documents\Zalo Received Files\ATT_STUDENT (1)\ATT_STUDENT\obj\Debug\ATT_STUDENT.Properties.Resources.resources
+C:\Users\pc\Documents\Zalo Received Files\ATT_STUDENT (1)\ATT_STUDENT\obj\Debug\ATT_STUDENT.Student.resources
+C:\Users\pc\Documents\Zalo Received Files\ATT_STUDENT (1)\ATT_STUDENT\obj\Debug\ATT_STUDENT.Teacher.resources
+C:\Users\pc\Documents\Zalo Received Files\ATT_STUDENT (1)\ATT_STUDENT\obj\Debug\ATT_STUDENT.csproj.GenerateResource.cache
+C:\Users\pc\Documents\Zalo Received Files\ATT_STUDENT (1)\ATT_STUDENT\obj\Debug\ATT_STUDENT.csproj.CoreCompileInputs.cache
+C:\Users\pc\Documents\Zalo Received Files\ATT_STUDENT (1)\ATT_STUDENT\obj\Debug\ATT_STUDENT.exe
+C:\Users\pc\Documents\Zalo Received Files\ATT_STUDENT (1)\ATT_STUDENT\obj\Debug\ATT_STUDENT.pdb
