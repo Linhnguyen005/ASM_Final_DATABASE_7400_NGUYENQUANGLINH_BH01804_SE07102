@@ -22,7 +22,8 @@ SELECT * FROM Student
 WHERE FullName LIKE '%Nguyen Van A%';
 
 INSERT INTO Student (FullName, DateOfBirth, Gender, Address, Phone, Email)
-VALUES ('Nguyen Van A', '2000-08-15', 'Nam', 'Hà Nội', '0123456789', 'nguyenvana@gmail.com');
+VALUES ('Nguyen Van A', '2000-08-15', 'Male', 'Hà Nội', '0123456789', 'nguyenvana@gmail.com');
+GO
 
 UPDATE Student
 SET Address = 'TP.HCM', Phone = '0987654321'
@@ -50,8 +51,10 @@ CREATE TABLE Teacher(
 );
 GO
 
-INSERT INTO Teacher (FullName, DateOfBirth, Gender, Address, Phone, Email, Major)
-VALUES ('Tran Thi B', '1980-05-20', 'Nữ', 'Hà Nội', '0987123456', 'tranthib@gmail.com', 'Toán học');
+SET IDENTITY_INSERT Teacher ON;
+INSERT INTO Teacher (FullName, TeacherID, DateOfBirth, Gender, Address, Phone, Email, Major)
+VALUES ('Tran Thi B', '1', '1980-05-20', 'Male', 'Hà Nội', '0987123456', 'tranthib@gmail.com', 'Toán học');
+SET IDENTITY_INSERT Teacher OFF;
 
 UPDATE Teacher
 SET Address = 'Ha Noi', Phone = '0978345678'
@@ -62,9 +65,14 @@ WHERE FullName LIKE '%Tran Thi B%';
 
 
 -- Thêm dữ liệu mẫu vào bảng Teacher
-INSERT INTO Teacher (FullName, DateOfBirth, Gender, Address, Phone, Email, Major)
-VALUES ('Linh Nguyen', '1980-05-15', 'Female', '456 Main St', '0909876543', 'linh@gmail.com', 'Mathematics');
-GO
+IF NOT EXISTS (SELECT 1 FROM Teacher WHERE TeacherID = 2)
+BEGIN
+INSERT INTO Teacher (FullName, TeacherID, DateOfBirth, Gender, Address, Phone, Email, Major)
+VALUES ('Linh Nguyen', '2', '1980-05-15', 'Female', '456 Main St', '0909876543', 'linh@gmail.com', 'Mathematics');
+END
+
+DBCC CHECKIDENT ('Teacher', RESEED, 1);
+SELECT * FROM[dbo].[Teacher]
 
 -- Tạo bảng Courses
 CREATE TABLE Courses (
@@ -74,26 +82,51 @@ CREATE TABLE Courses (
 );
 GO
 
+SELECT * FROM Teacher WHERE TeacherID = 1;
+
 -- Thêm dữ liệu mẫu vào bảng Courses
 INSERT INTO Courses (CourseName, TeacherID)
-VALUES ('SE07102', 1);
+VALUES ('SE07102', 1); 
 GO
 
+ SELECT * FROM[dbo].[Courses]
+
+
+ SELECT
+    s.StudentID,
+    s.FullName,
+    c.CourseID,
+    c.CourseName
+FROM
+    Student s
+LEFT JOIN
+    Score sc ON s.StudentID = sc.StudentID
+LEFT JOIN
+    Courses c ON sc.CourseID = c.CourseID;
+GO
+
+
+
 -- Tạo bảng Score
-CREATE TABLE Score(
+CREATE TABLE Score (
     ScoreID INT PRIMARY KEY IDENTITY(1,1),
     Scorename NVARCHAR(100) NOT NULL,
     Part1 FLOAT NOT NULL,
     Part2 FLOAT NOT NULL,
     Final FLOAT NOT NULL,
-    StudentID INT FOREIGN KEY REFERENCES Student(StudentID),
-    CourseID INT FOREIGN KEY REFERENCES Courses(CourseID)
+    StudentID INT NOT NULL, -- StudentID is required
+    CourseID INT NOT NULL, -- CourseID is required
+    FOREIGN KEY (StudentID) REFERENCES Student(StudentID),
+    FOREIGN KEY (CourseID) REFERENCES Courses(CourseID)
 );
 GO
 
+SELECT StudentID FROM Student WHERE FullName = 'Nguyen Van A';
+SELECT CourseID FROM Courses WHERE CourseName = 'SE07102';
+
 -- Thêm dữ liệu mẫu vào bảng Score
 INSERT INTO Score (Scorename, Part1, Part2, Final, StudentID, CourseID)
-VALUES ('Midterm Exam', 8.0, 7.5, 8.5, 1, 1);
+VALUES ('Midterm Exam', 8.0, 7.5, 8.5, 1, 1); 
 GO
 
 -- Truy vấn cập nhật điểm
@@ -108,12 +141,22 @@ WHERE StudentID = 1 AND CourseID = 1;
 GO
 
 -- Truy vấn lấy thông tin điểm
-SELECT Student.FullName, Courses.CourseName, Score.Scorename, Score.Part1, Score.Part2, Score.Final
-FROM Score
-JOIN Student ON Score.StudentID = Student.StudentID
-JOIN Courses ON Score.CourseID = Courses.CourseID
-WHERE Student.StudentID = 1;
+SELECT
+    s.FullName AS StudentName,
+    sc.Scorename,
+    sc.Part1,
+    sc.Part2,
+    sc.Final,
+    c.CourseName
+FROM
+    Score sc
+JOIN
+    Student s ON sc.StudentID = s.StudentID
+JOIN
+    Courses c ON sc.CourseID = c.CourseID;
 GO
+
+SELECT * FROM[dbo].[Score]
 
 -- Tạo bảng Users
 CREATE TABLE Users (
@@ -135,6 +178,8 @@ DELETE FROM Student;
 DELETE FROM Score;
 GO
 
+SELECT * FROM[dbo].[Users]
+
 -- Tạo bảng Enrollments
 CREATE TABLE Enrollments (
     EnrollmentID INT PRIMARY KEY IDENTITY(1,1),
@@ -143,30 +188,27 @@ CREATE TABLE Enrollments (
 );
 GO
 
--- Tạo bảng Attendance
-CREATE TABLE Attendance (
-    AttendanceID INT PRIMARY KEY IDENTITY(1,1),
-    StudentID INT FOREIGN KEY REFERENCES Student(StudentID),
-    CourseID INT FOREIGN KEY REFERENCES Courses(CourseID),
-    AttendanceDate DATE,
-    Status NVARCHAR(20)
+
+
+DROP TABLE Score;
+GO
+
+CREATE TABLE Score (
+    ScoreID INT PRIMARY KEY IDENTITY(1,1),
+    Scorename NVARCHAR(100) NOT NULL,
+    Part1 FLOAT NOT NULL,
+    Part2 FLOAT NOT NULL,
+    Final FLOAT NOT NULL,
+    StudentID INT NOT NULL,
+    CourseID INT NOT NULL,
+    FOREIGN KEY (StudentID) REFERENCES Student(StudentID),
+    FOREIGN KEY (CourseID) REFERENCES Courses(CourseID)
 );
 GO
 
--- Tạo bảng Mark
-CREATE TABLE Mark(
-    S_ID INT FOREIGN KEY REFERENCES Student(StudentID),
-    C_ID INT FOREIGN KEY REFERENCES Courses(CourseID),
-    Attendance NVARCHAR(10) NOT NULL CHECK (Attendance LIKE '%'),
-    Assm1 INT NOT NULL,
-    Assm2 INT NOT NULL,
-    CONSTRAINT PK_Mark PRIMARY KEY(S_ID, C_ID)
-);
+SELECT * FROM sys.objects WHERE name = N'Scores';
+
+INSERT INTO Score (Scorename, Part1, Part2, Final, StudentID, CourseID)
+VALUES ('Midterm Exam', 8.0, 7.5, 8.5, 1, 1); 
 GO
 
--- Truy vấn lấy thông tin từ bảng Mark
-SELECT Mark.S_ID, Student.FullName, Mark.C_ID, Courses.CourseName, Mark.Attendance, Mark.Assm1, Mark.Assm2
-FROM Mark
-LEFT JOIN Student ON Mark.S_ID = Student.StudentID
-LEFT JOIN Courses ON Mark.C_ID = Courses.CourseID;
-GO
